@@ -13,7 +13,7 @@
 
 ## Screenshots
 
-<img src="PacMan1.png" alt="PacMan" width="300" height="300">
+<img src="Screenshot.png" alt="PacMan" width="300" height="300">
 
 ## Description
 
