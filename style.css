@@ -104,17 +104,17 @@
 }
 
 .cube-1 .left {
-  background: url(images/img-3.jpeg) no-repeat 50% 0;
+  background: url(images/img-3.jpg) no-repeat 50% 0;
   background-size: cover;
 }
 
 .cube-2 .left {
-  background: url(images/img-3.jpeg) no-repeat 50% -7vw;
+  background: url(images/img-3.jpg) no-repeat 50% -7vw;
   background-size: cover;
 }
 
 .cube-3 .left {
-  background: url(images/img-3.jpeg) no-repeat 50% -14vw;
+  background: url(images/img-3.jpg) no-repeat 50% -14vw;
   background-size: cover;
 }
 

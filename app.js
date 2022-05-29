@@ -1,5 +1,5 @@
-let x = 0, bool = false, interval;
-
+let x = 0;
+let bool = false, interval;
 
 const rotate = () => {
   const cubes = document.querySelectorAll(".cube");
@@ -8,8 +8,14 @@ const rotate = () => {
 
 const changePlayPause = () => {
   const i = document.querySelector(".play-pause i");
-  const cls = i.classList;
-  console.log(cls);
+  const cls = i.classList[1];
+  if (cls === "fa-play") {
+    i.classList.remove("fa-play");
+    i.classList.add("fa-pause");
+  } else {
+    i.classList.remove("fa-pause");
+    i.classList.add("fa-play");
+  }
 }
 
 const playPause = () => {
@@ -18,9 +24,11 @@ const playPause = () => {
       x -= 90;
       rotate();
     }, 2000);
+    changePlayPause();
     bool = true;
   } else {
     clearInterval(interval);
+    changePlayPause();
     bool = false;
   };
 
@@ -29,6 +37,9 @@ const playPause = () => {
 document.querySelector(".left-arrow").addEventListener("click", () => {
   x += 90;
   rotate();
+  if (bool) {
+    playPause();
+  }
 });
 
 document.querySelector(".left-arrow").addEventListener("mouseover", () => {
@@ -44,6 +55,9 @@ document.querySelector(".left-arrow").addEventListener("mouseout", () => {
 document.querySelector(".right-arrow").addEventListener("click", () => {
   x -= 90;
   rotate();
+  if (bool) {
+    playPause();
+  }
 });
 
 document.querySelector(".right-arrow").addEventListener("mouseover", () => {
@@ -58,5 +72,4 @@ document.querySelector(".right-arrow").addEventListener("mouseout", () => {
 
 document.querySelector(".play-pause").addEventListener("click", () => {
     playPause();
-    changePlayPause();
 });
