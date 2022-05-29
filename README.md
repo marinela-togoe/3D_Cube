@@ -13,7 +13,7 @@
 
 ## Screenshots
 
-<img src="Screenshot.png" alt="PacMan" width="300" height="300">
+<img src="/images/Screenshot.png" alt="3D_Cube" width="300" height="300">
 
 ## Description
 
